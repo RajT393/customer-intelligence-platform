@@ -48,7 +48,7 @@ story.append(Paragraph(
     "A single Streamlit application that ingests data from 5 sources, joins it by customer_id, and runs it "
     "through a transparent, rule-based scoring engine to produce a health score, risk list, opportunity list, "
     "and a recommended next best action — each with explicit reasoning traceable back to specific evidence. "
-    "An AI layer (Claude) sits on top purely for natural-language summarization, not for scoring. This split was "
+    "An AI layer (Gemini) sits on top purely for natural-language summarization, not for scoring. This split was "
     "deliberate: the parts of the tool that drive action (score, risk severity, recommended action) are rule-based "
     "and auditable, so a CSM can see exactly why an account is flagged and trust or override it. The part that "
     "benefits from language generation (a readable summary paragraph) is the only part handed to an LLM, and even "
@@ -94,7 +94,7 @@ arrow(240, 195, 335, 165)
 
 # Row 4: Summary generation branch
 box(60, 130, 170, 35, "Template Summary\n(no API key needed)", fill="#f0fdf4", stroke="#12b76a")
-box(250, 130, 170, 35, "Claude API\n(if key provided)", fill="#fff7ed", stroke="#f5a623")
+box(250, 130, 170, 35, "Gemini API\n(if key provided)", fill="#fff7ed", stroke="#f5a623")
 arrow(145, 130, 220, 90)
 arrow(335, 130, 260, 90)
 
@@ -104,7 +104,7 @@ box(120, 55, 240, 35, "Streamlit UI - profile, score, risks,\nopportunities, tim
 story.append(d)
 story.append(Paragraph(
     "Data flow: five JSON sources → joined into one per-customer record by the data loader → rule-based "
-    "intelligence engine computes score/risks/opportunities/next action → summary layer generates prose (Claude "
+    "intelligence engine computes score/risks/opportunities/next action → summary layer generates prose (Gemini "
     "if a key is present, otherwise a deterministic template) → Streamlit renders the unified customer view.",
     styles["Small"]))
 
@@ -118,7 +118,7 @@ tech_table_data = [
     ["Layer", "Choice", "Reasoning"],
     ["UI / App framework", "Streamlit", "Fastest path to a deployable internal tool; no frontend build needed"],
     ["Scoring logic", "Python, rule-based", "Explainable and auditable — CSMs need to trust and override scores"],
-    ["AI Model", "Claude (claude-sonnet-4-6) via Anthropic API", "Used only for summarization, not classification/scoring"],
+    ["AI Model", "Gemini (gemini-1.5-flash) via Google API", "Used only for summarization, not classification/scoring"],
     ["Data layer", "Static JSON (dummy)", "Swappable for live CRM/Slack/email APIs without touching engine logic"],
     ["Deployment", "Streamlit Community Cloud", "Free, public URL, GitHub-based, no infra to manage"],
 ]
@@ -137,7 +137,7 @@ t.setStyle(TableStyle([
 story.append(t)
 story.append(Spacer(1, 12))
 
-story.append(Paragraph("Prompt used for AI Summary (when Claude key is provided):", styles["Bodyc"]))
+story.append(Paragraph("Prompt used for AI Summary (when Gemini key is provided):", styles["Bodyc"]))
 prompt_text = (
     "You are a customer success analyst. Write a concise 3-4 sentence account summary for an internal "
     "CSM/sales dashboard. Be direct and specific, no filler, no marketing tone.<br/><br/>"

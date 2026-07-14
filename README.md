@@ -25,7 +25,7 @@ one view a CSM can act on in 30 seconds instead of five tabs.
 - Builds a merged **activity timeline** across support/email/Slack
 - Recommends a **Next Best Action** with a priority level and a one-line
   "why" — not just a suggestion, a reason a CSM would trust enough to act on
-- Generates an **AI summary** — calls Claude live if you provide an API
+- Generates an **AI summary** — calls Gemini live if you provide an API
   key in the sidebar; otherwise falls back to a deterministic template
   summary built from the same structured data, so the app is fully
   functional with zero credentials
@@ -36,8 +36,36 @@ one view a CSM can act on in 30 seconds instead of five tabs.
 |---|---|---|
 | UI | Streamlit | Fastest path to a clean, deployable internal tool; no frontend build step |
 | Logic | Plain Python, rule-based scoring | Explainability was prioritized over ML sophistication — CSMs need to trust and override scores, not guess why they moved |
-| AI Model | Claude (Sonnet), optional | Used specifically for natural-language summarization, not for scoring/classification — the parts that benefit from language generation, not the parts that need to be auditable |
+| AI Model | Gemini (1.5 Flash), optional | Used specifically for natural-language summarization, not for scoring/classification — the parts that benefit from language generation, not the parts that need to be auditable |
 | Data | Static JSON, dummy | Swappable for live CRM/Zoho/Slack API calls without touching the logic or UI layer |
+
+## Architecture & Workflow
+
+```mermaid
+graph TD
+    A[CRM] --> F
+    B[Support Tickets] --> F
+    C[Emails] --> F
+    D[Slack Notes] --> F
+    E[Product Usage] --> F
+
+    F[Data Loader<br/>Joins by customer_id] --> G
+
+    G[Intelligence Engine<br/>Rule-based Scoring & Recommendations] --> H
+    G --> I
+
+    H[Template Summary<br/>No API Key] --> J
+    I[Gemini API<br/>Live Executive Briefing] --> J
+
+    J[Streamlit UI<br/>Unified Customer View]
+```
+
+**Workflow:**
+1. **Data Ingestion:** Five distinct JSON sources are ingested.
+2. **Data Loader:** The data is joined together by `customer_id` into a single comprehensive record.
+3. **Intelligence Engine:** A fully transparent, rule-based engine computes the health score, identifies risks and opportunities, and recommends the next best action.
+4. **Summary Layer:** An AI summary generates professional prose (using Gemini if a key is present, otherwise falling back to a deterministic template).
+5. **UI Rendering:** Streamlit renders the unified, interactive customer view.
 
 ## Project structure
 
@@ -48,7 +76,7 @@ volopay-intel/
 ├── requirements.txt
 ├── utils/
 │   ├── intelligence_engine.py   # Data merging, health score, risks, opportunities, next action
-│   └── ai_summary.py            # Claude API call + template fallback
+│   └── ai_summary.py            # Gemini API call + template fallback
 ├── data/
 │   ├── crm.json
 │   ├── support_tickets.json
@@ -66,8 +94,8 @@ streamlit run app.py
 ```
 
 Open http://localhost:8501. No API key required — the AI Summary panel
-will use the template fallback. To see live Claude-generated summaries,
-paste an Anthropic API key into the sidebar field (kept in-session only,
+will use the template fallback. To see live Gemini-generated summaries,
+paste a Gemini API key into the sidebar field (kept in-session only,
 never written to disk).
 
 ## Deploy publicly (free, ~5 minutes) — Streamlit Community Cloud
@@ -103,7 +131,7 @@ No API key is required for the deployed app to work end-to-end.
 
 ## Security considerations
 
-- No credentials are stored — the Anthropic API key field is session-only
+- No credentials are stored — the Gemini API key field is session-only
   and never persisted or logged
 - In a production version, source data (CRM/Slack/email) would be pulled
   via OAuth-scoped read-only API tokens, not stored raw; PII (email
@@ -125,7 +153,7 @@ No API key is required for the deployed app to work end-to-end.
 
 ## Error handling & edge cases handled
 
-- Missing/invalid Anthropic API key → silently falls back to template
+- Missing/invalid Gemini API key → silently falls back to template
   summary rather than crashing the app (see `ai_summary.py`)
 - Customer with no tickets/emails/Slack notes → empty states render
   cleanly ("No active risk signals detected" / "No expansion signals")
