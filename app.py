@@ -66,7 +66,8 @@ with col1:
     st.markdown(f"## {crm['company']}")
     st.caption(f"{crm['industry']} · {crm['country']} · {crm['plan']} plan · Owner: {crm['owner']}")
 with col2:
-    st.metric("Health Score", f"{score}/100", label=f"{emoji} {label}")
+    st.metric("Health Score", f"{score}/100")
+    st.caption(f"{emoji} {label}")
 with col3:
     st.metric("MRR", f"${crm['mrr_usd']:,}")
 
