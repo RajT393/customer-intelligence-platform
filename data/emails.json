@@ -1,0 +1,58 @@
+[
+  {
+    "email_id": "E-501",
+    "customer_id": "CUST-001",
+    "date": "2026-07-08",
+    "subject": "Re: Contract renewal terms",
+    "snippet": "We're evaluating two other vendors before renewal. Need to see the payout issue resolved first.",
+    "sentiment": "Negative"
+  },
+  {
+    "email_id": "E-495",
+    "customer_id": "CUST-001",
+    "date": "2026-06-24",
+    "subject": "Q3 usage review",
+    "snippet": "Finance team flagged that only half our licensed seats are being used.",
+    "sentiment": "Neutral"
+  },
+  {
+    "email_id": "E-480",
+    "customer_id": "CUST-002",
+    "date": "2026-07-02",
+    "subject": "Loved the new approval mobile flow",
+    "snippet": "Our AP lead specifically called out how much faster approvals are now.",
+    "sentiment": "Positive"
+  },
+  {
+    "email_id": "E-510",
+    "customer_id": "CUST-003",
+    "date": "2026-07-11",
+    "subject": "Escalation: still unresolved after 3 tickets",
+    "snippet": "This is our third message on the same reconciliation issue. Considering downgrade if unresolved by month end.",
+    "sentiment": "Negative"
+  },
+  {
+    "email_id": "E-470",
+    "customer_id": "CUST-004",
+    "date": "2026-06-30",
+    "subject": "Multi-entity rollout for APAC subsidiaries",
+    "snippet": "Leadership wants to expand to 3 new entities in Q3, asking about enterprise multi-entity pricing.",
+    "sentiment": "Positive"
+  },
+  {
+    "email_id": "E-460",
+    "customer_id": "CUST-005",
+    "date": "2026-06-16",
+    "subject": "Great quarter",
+    "snippet": "Smooth quarter, no major issues, happy with support responsiveness.",
+    "sentiment": "Positive"
+  },
+  {
+    "email_id": "E-515",
+    "customer_id": "CUST-006",
+    "date": "2026-07-09",
+    "subject": "Following up on onboarding",
+    "snippet": "We've been slow to roll this out internally, still only using it for one team.",
+    "sentiment": "Neutral"
+  }
+]

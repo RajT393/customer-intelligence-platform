@@ -1,0 +1,50 @@
+[
+  {
+    "message_id": "S-201",
+    "customer_id": "CUST-001",
+    "date": "2026-07-09",
+    "channel": "#csm-northwind",
+    "author": "Priya Nair",
+    "message": "Payout decline bug is a big deal for them, ops team is manually processing payouts as workaround. Renewal is in 6 months and they're already shopping around."
+  },
+  {
+    "message_id": "S-198",
+    "customer_id": "CUST-001",
+    "date": "2026-06-22",
+    "channel": "#csm-northwind",
+    "author": "Priya Nair",
+    "message": "Seat utilization is only 57%. Worth a QBR to understand if scope changed or if it's an adoption problem."
+  },
+  {
+    "message_id": "S-215",
+    "customer_id": "CUST-002",
+    "date": "2026-07-04",
+    "channel": "#csm-bluepeak",
+    "author": "Arjun Mehta",
+    "message": "Bluepeak's finance lead mentioned in passing they might add their new LA office to the account next year."
+  },
+  {
+    "message_id": "S-220",
+    "customer_id": "CUST-003",
+    "date": "2026-07-12",
+    "channel": "#csm-farro",
+    "author": "Priya Nair",
+    "message": "Third reconciliation ticket in a month from Farro. This is becoming a trust issue, not just a bug. Need eng escalation today."
+  },
+  {
+    "message_id": "S-190",
+    "customer_id": "CUST-004",
+    "date": "2026-07-01",
+    "channel": "#csm-klarion",
+    "author": "Sana Iqbal",
+    "message": "Klarion CFO confirmed multi-entity expansion budget approved internally, just waiting on our pricing proposal."
+  },
+  {
+    "message_id": "S-225",
+    "customer_id": "CUST-006",
+    "date": "2026-07-10",
+    "channel": "#csm-verdant",
+    "author": "Sana Iqbal",
+    "message": "Verdant onboarding stalled at week 6. Only 4 of 20 seats activated. Champion (ops lead) may have left the company, no response to last 2 outreach attempts."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "ticket_id": "T-1042",
+    "customer_id": "CUST-001",
+    "date": "2026-07-10",
+    "subject": "Card decline errors during batch payouts",
+    "priority": "High",
+    "status": "Open",
+    "sentiment": "Frustrated"
+  },
+  {
+    "ticket_id": "T-1039",
+    "customer_id": "CUST-001",
+    "date": "2026-07-03",
+    "subject": "Approval workflow not routing to correct manager",
+    "priority": "Medium",
+    "status": "Resolved",
+    "sentiment": "Neutral"
+  },
+  {
+    "ticket_id": "T-1044",
+    "customer_id": "CUST-001",
+    "date": "2026-06-25",
+    "subject": "Export to Tally failing for multi-currency",
+    "priority": "High",
+    "status": "Resolved",
+    "sentiment": "Frustrated"
+  },
+  {
+    "ticket_id": "T-1030",
+    "customer_id": "CUST-002",
+    "date": "2026-06-14",
+    "subject": "Question about adding a new department budget",
+    "priority": "Low",
+    "status": "Resolved",
+    "sentiment": "Positive"
+  },
+  {
+    "ticket_id": "T-1051",
+    "customer_id": "CUST-003",
+    "date": "2026-07-12",
+    "subject": "Unable to reconcile May invoices, third escalation",
+    "priority": "High",
+    "status": "Open",
+    "sentiment": "Frustrated"
+  },
+  {
+    "ticket_id": "T-1048",
+    "customer_id": "CUST-003",
+    "date": "2026-07-05",
+    "subject": "Reconciliation mismatch in expense report",
+    "priority": "High",
+    "status": "Resolved",
+    "sentiment": "Frustrated"
+  },
+  {
+    "ticket_id": "T-1046",
+    "customer_id": "CUST-003",
+    "date": "2026-06-28",
+    "subject": "Card not delivered to new hire",
+    "priority": "Medium",
+    "status": "Resolved",
+    "sentiment": "Neutral"
+  },
+  {
+    "ticket_id": "T-1020",
+    "customer_id": "CUST-004",
+    "date": "2026-06-19",
+    "subject": "Interested in API access for custom reporting",
+    "priority": "Low",
+    "status": "Resolved",
+    "sentiment": "Positive"
+  },
+  {
+    "ticket_id": "T-1005",
+    "customer_id": "CUST-005",
+    "date": "2026-05-30",
+    "subject": "Bulk upload template question",
+    "priority": "Low",
+    "status": "Resolved",
+    "sentiment": "Positive"
+  },
+  {
+    "ticket_id": "T-1053",
+    "customer_id": "CUST-006",
+    "date": "2026-07-13",
+    "subject": "How do I add my finance team as users?",
+    "priority": "Medium",
+    "status": "Open",
+    "sentiment": "Neutral"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "customer_id": "CUST-001",
+    "active_users_30d": 34,
+    "logins_30d": 210,
+    "feature_adoption_pct": 48,
+    "transactions_30d": 890,
+    "usage_trend_pct": -18
+  },
+  {
+    "customer_id": "CUST-002",
+    "active_users_30d": 23,
+    "logins_30d": 340,
+    "feature_adoption_pct": 81,
+    "transactions_30d": 1220,
+    "usage_trend_pct": 12
+  },
+  {
+    "customer_id": "CUST-003",
+    "active_users_30d": 11,
+    "logins_30d": 60,
+    "feature_adoption_pct": 29,
+    "transactions_30d": 340,
+    "usage_trend_pct": -34
+  },
+  {
+    "customer_id": "CUST-004",
+    "active_users_30d": 128,
+    "logins_30d": 1890,
+    "feature_adoption_pct": 74,
+    "transactions_30d": 6100,
+    "usage_trend_pct": 22
+  },
+  {
+    "customer_id": "CUST-005",
+    "active_users_30d": 41,
+    "logins_30d": 480,
+    "feature_adoption_pct": 68,
+    "transactions_30d": 1510,
+    "usage_trend_pct": 6
+  },
+  {
+    "customer_id": "CUST-006",
+    "active_users_30d": 4,
+    "logins_30d": 15,
+    "feature_adoption_pct": 9,
+    "transactions_30d": 22,
+    "usage_trend_pct": -40
+  }
+]
